@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Health Equity - Verified Data & Citations</title>
+    <meta name="description" content="Official California health disparities data with verified sources and AB 1204 compliance information.">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="gov-header">
+        <div class="container">
+            <div class="gov-header-content">
+                <div class="gov-branding">
+                    <h1 class="gov-site-title">California Health Equity</h1>
+                    <p class="gov-agency">Verified Data & Official Source Citations</p>
+                </div>
+                <div class="ca-seal">CA</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Metrics Overview -->
+    <section class="metrics-overview">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card urgent">
+                    <div class="metric-number">11.1</div>
+                    <div class="metric-label">Year Gap</div>
+                    <div class="metric-desc">Life expectancy between Asian (85.7) and Black (74.6) Californians</div>
+                    <div class="metric-source">
+                        <a href="https://www.chcf.org/resource/health-disparities-by-race-and-ethnicity-in-california-almanac/" target="_blank" rel="noopener noreferrer" class="source-link">CHCF 2024 ↗</a>
+                    </div>
+                </div>
+                <div class="metric-card critical">
+                    <div class="metric-number">3-4x</div>
+                    <div class="metric-label">Higher Risk</div>
+                    <div class="metric-desc">Black maternal mortality vs. other groups (CA-PAMR 2024)</div>
+                    <div class="metric-source">
+                        <a href="https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data" target="_blank" rel="noopener noreferrer" class="source-link">CA-PAMR ↗</a>
+                    </div>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-number">353</div>
+                    <div class="metric-label">Hospitals</div>
+                    <div class="metric-desc">Must comply with AB 1204 by Sept 30, 2025</div>
+                    <div class="metric-source">
+                        <a href="https://hcai.ca.gov/" target="_blank" rel="noopener noreferrer" class="source-link">HCAI ↗</a>
+                    </div>
+                </div>
+                <div class="metric-card info">
+                    <div class="metric-number">18%</div>
+                    <div class="metric-label">No Usual Care</div>
+                    <div class="metric-desc">Latino/Hispanic Californians lack usual source of care</div>
+                    <div class="metric-source">
+                        <a href="https://healthpolicy.ucla.edu/our-work/publications/health-disparities-race-and-ethnicity-california-2024-edition" target="_blank" rel="noopener noreferrer" class="source-link">CHIS 2021 ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Disparities Visualization -->
+    <section class="chart-section">
+        <div class="container">
+            <h2 class="section-title">Health Disparities in California</h2>
+            <p class="section-subtitle">Verified data from California Health Care Foundation 2024 Edition <a href="https://www.chcf.org/resource/health-disparities-by-race-and-ethnicity-in-california-almanac/" target="_blank" rel="noopener noreferrer" class="inline-citation">[1]</a></p>
+            
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Life Expectancy by Race/Ethnicity (2024 Data)</h3>
+                    <div class="chart-wrapper" style="position: relative; height: 400px;">
+                        <canvas id="lifeExpectancyChart"></canvas>
+                    </div>
+                    <div class="chart-citation">
+                        <p><strong>Source:</strong> <a href="https://www.chcf.org/resource/health-disparities-by-race-and-ethnicity-in-california-almanac/" target="_blank" rel="noopener noreferrer">California Health Care Foundation, Health Disparities by Race and Ethnicity: 2024 Edition</a></p>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Healthcare Access Barriers (CHIS 2021)</h3>
+                    <div class="chart-wrapper" style="position: relative; height: 400px;">
+                        <canvas id="accessBarriersChart"></canvas>
+                    </div>
+                    <div class="chart-citation">
+                        <p><strong>Source:</strong> <a href="https://healthpolicy.ucla.edu/our-work/publications/health-disparities-race-and-ethnicity-california-2024-edition" target="_blank" rel="noopener noreferrer">UCLA Center for Health Policy Research, CHIS 2021 Data</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maternal Health Section -->
+    <section class="chart-section maternal-section">
+        <div class="container">
+            <h2 class="section-title">Maternal Health Disparities</h2>
+            <p class="section-subtitle">California Maternal Quality Care Collaborative (CA-PAMR) 2024 Data <a href="https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data" target="_blank" rel="noopener noreferrer" class="inline-citation">[2]</a></p>
+            
+            <div class="maternal-stats">
+                <div class="stat-highlight">
+                    <div class="stat-number">12.8</div>
+                    <div class="stat-label">Overall California Rate</div>
+                    <div class="stat-desc">Deaths per 100,000 live births (2019)</div>
+                </div>
+                <div class="stat-highlight critical">
+                    <div class="stat-number">3-4x</div>
+                    <div class="stat-label">Black Mothers Risk</div>
+                    <div class="stat-desc">Higher maternal mortality rate than other groups</div>
+                </div>
+            </div>
+            
+            <div class="maternal-info">
+                <h4>Key Findings from CA-PAMR Data:</h4>
+                <ul>
+                    <li>Black mothers face 3-4 times higher risk than other racial groups <a href="https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data" target="_blank" rel="noopener noreferrer" class="inline-citation">[2]</a></li>
+                    <li>California overall rate: 12.8 deaths per 100,000 live births (2019) <a href="https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data" target="_blank" rel="noopener noreferrer" class="inline-citation">[2]</a></li>
+                    <li>Significant disparity ratios remain despite state improvements</li>
+                    <li>Ongoing monitoring through California Maternal Quality Care Collaborative</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- AB 1204 Compliance Information -->
+    <section class="chart-section compliance-section">
+        <div class="container">
+            <h2 class="section-title">AB 1204 Health Equity Reporting Requirements</h2>
+            <p class="section-subtitle">Mandatory compliance information from HCAI and Hospital Quality Institute <a href="https://hcai.ca.gov/" target="_blank" rel="noopener noreferrer" class="inline-citation">[4]</a> <a href="https://hqinstitute.org/support-for-mandatory-health-equity-reporting/" target="_blank" rel="noopener noreferrer" class="inline-citation">[5]</a></p>
+            
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <h4>Hospital Coverage</h4>
+                    <div class="compliance-stat">353</div>
+                    <p>California hospitals must comply with AB 1204 reporting requirements <a href="https://hcai.ca.gov/" target="_blank" rel="noopener noreferrer" class="inline-citation">[4]</a></p>
+                </div>
+                
+                <div class="compliance-card">
+                    <h4>Compliance Deadline</h4>
+                    <div class="compliance-stat">Sept 30, 2025</div>
+                    <p>Mandatory submission deadline for health equity data <a href="https://hqinstitute.org/support-for-mandatory-health-equity-reporting/" target="_blank" rel="noopener noreferrer" class="inline-citation">[5]</a></p>
+                </div>
+                
+                <div class="compliance-card">
+                    <h4>Required Measures</h4>
+                    <div class="compliance-stat">11 + 2-9</div>
+                    <p>Structural measures plus core quality measures per hospital <a href="https://hqinstitute.org/support-for-mandatory-health-equity-reporting/" target="_blank" rel="noopener noreferrer" class="inline-citation">[5]</a></p>
+                </div>
+                
+                <div class="compliance-card">
+                    <h4>Demographics</h4>
+                    <div class="compliance-stat">9</div>
+                    <p>Demographic categories for data stratification <a href="https://hqinstitute.org/support-for-mandatory-health-equity-reporting/" target="_blank" rel="noopener noreferrer" class="inline-citation">[5]</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Sources & Methodology -->
+    <section class="sources-section">
+        <div class="container">
+            <h2 class="section-title">Data Sources & Methodology</h2>
+            
+            <div class="methodology-grid">
+                <div class="methodology-card">
+                    <h4>Life Expectancy Data</h4>
+                    <p><strong>Source:</strong> California Health Care Foundation</p>
+                    <p><strong>Report:</strong> Health Disparities by Race and Ethnicity: 2024 Edition</p>
+                    <p><strong>Published:</strong> May 2024</p>
+                    <p><strong>Methodology:</strong> Analysis of vital statistics and demographic data</p>
+                    <a href="https://www.chcf.org/resource/health-disparities-by-race-and-ethnicity-in-california-almanac/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View Full Report ↗</a>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4>Healthcare Access Data</h4>
+                    <p><strong>Source:</strong> UCLA Center for Health Policy Research</p>
+                    <p><strong>Survey:</strong> California Health Interview Survey (CHIS) 2021</p>
+                    <p><strong>Published:</strong> June 2024</p>
+                    <p><strong>Methodology:</strong> Representative state survey of California adults</p>
+                    <a href="https://healthpolicy.ucla.edu/our-work/publications/health-disparities-race-and-ethnicity-california-2024-edition" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View Full Report ↗</a>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4>Maternal Mortality Data</h4>
+                    <p><strong>Source:</strong> California Maternal Quality Care Collaborative</p>
+                    <p><strong>Program:</strong> CA-PAMR (Pregnancy-Associated Mortality Review)</p>
+                    <p><strong>Updated:</strong> 2024</p>
+                    <p><strong>Methodology:</strong> Review of pregnancy-associated deaths in California</p>
+                    <a href="https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View Data ↗</a>
+                </div>
+                
+                <div class="methodology-card">
+                    <h4>AB 1204 Requirements</h4>
+                    <p><strong>Source:</strong> Department of Health Care Access and Information (HCAI)</p>
+                    <p><strong>Support:</strong> Hospital Quality Institute</p>
+                    <p><strong>Updated:</strong> 2025</p>
+                    <p><strong>Methodology:</strong> Legislative requirements and implementation guidance</p>
+                    <a href="https://hqinstitute.org/support-for-mandatory-health-equity-reporting/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View Requirements ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Bibliography -->
+    <section class="bibliography-section">
+        <div class="container">
+            <h2 class="section-title">Complete Bibliography</h2>
+            
+            <div class="references">
+                <div class="reference">
+                    <span class="ref-number">[1]</span>
+                    <div class="ref-content">
+                        <p><strong>California Health Care Foundation.</strong> "Health Disparities by Race and Ethnicity: 2024 Edition." May 2024.</p>
+                        <a href="https://www.chcf.org/resource/health-disparities-by-race-and-ethnicity-in-california-almanac/" target="_blank" rel="noopener noreferrer" class="ref-link">https://www.chcf.org/resource/health-disparities-by-race-and-ethnicity-in-california-almanac/</a>
+                    </div>
+                </div>
+                
+                <div class="reference">
+                    <span class="ref-number">[2]</span>
+                    <div class="ref-content">
+                        <p><strong>California Maternal Quality Care Collaborative.</strong> "CA-PAMR Recent Data." 2024.</p>
+                        <a href="https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data" target="_blank" rel="noopener noreferrer" class="ref-link">https://www.cmqcc.org/education-research/maternal-mortality-review-ca-pamr/ca-pamr-recent-data</a>
+                    </div>
+                </div>
+                
+                <div class="reference">
+                    <span class="ref-number">[3]</span>
+                    <div class="ref-content">
+                        <p><strong>UCLA Center for Health Policy Research.</strong> "Health Disparities by Race and Ethnicity in California — 2024 Edition." June 2024.</p>
+                        <a href="https://healthpolicy.ucla.edu/our-work/publications/health-disparities-race-and-ethnicity-california-2024-edition" target="_blank" rel="noopener noreferrer" class="ref-link">https://healthpolicy.ucla.edu/our-work/publications/health-disparities-race-and-ethnicity-california-2024-edition</a>
+                    </div>
+                </div>
+                
+                <div class="reference">
+                    <span class="ref-number">[4]</span>
+                    <div class="ref-content">
+                        <p><strong>Department of Health Care Access and Information.</strong> "HCAI Official Website." 2025.</p>
+                        <a href="https://hcai.ca.gov/" target="_blank" rel="noopener noreferrer" class="ref-link">https://hcai.ca.gov/</a>
+                    </div>
+                </div>
+                
+                <div class="reference">
+                    <span class="ref-number">[5]</span>
+                    <div class="ref-content">
+                        <p><strong>Hospital Quality Institute.</strong> "Support for Mandatory Health Equity Reporting under AB 1204." 2025.</p>
+                        <a href="https://hqinstitute.org/support-for-mandatory-health-equity-reporting/" target="_blank" rel="noopener noreferrer" class="ref-link">https://hqinstitute.org/support-for-mandatory-health-equity-reporting/</a>
+                    </div>
+                </div>
+                
+                <div class="reference">
+                    <span class="ref-number">[6]</span>
+                    <div class="ref-content">
+                        <p><strong>Northwestern University.</strong> "Life expectancy in California has not recovered since the pandemic." July 2025.</p>
+                        <a href="https://news.northwestern.edu/stories/2025/07/northwestern-study-shows-life-expectancy-in-california-has-not-recovered-since-pandemic/" target="_blank" rel="noopener noreferrer" class="ref-link">https://news.northwestern.edu/stories/2025/07/northwestern-study-shows-life-expectancy-in-california-has-not-recovered-since-pandemic/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
